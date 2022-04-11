@@ -5,14 +5,14 @@ $           PASAR DE BINARIO A DECIMAL
 ?                   (10011)
 ?              1 x 2^0 = 1 x  1 =  1 
 ?              1 x 2^1 = 1 x  2 =  2
-?              0 x 2^2 = 0 x  4 =  0    = 19
+?              0 x 2^2 = 0 x  4 =  0    = 19   
 ?              0 x 2^3 = 0 x  8 =  0
 ?              1 x 2^4 = 1 x 16 = 16
 */
 function BinarioADecimal(num) {
-    let sum = 0
-    for (i = 0; i < num.length; i++){sum += Math.pow(2, num.length - (i + 1)) * num[i]}
-    return sum
+  let suma = 0;
+  for (let i = 0; i < num.length; i++) {suma += num[i] * 2 ** (num.length - 1 - i)}
+  return suma
 }
 
 
@@ -24,8 +24,8 @@ $         PASAR DE DECIMAL A BINARIO
 ?              9 / 2 = 4 resto 1 ----> 1 
 ?              4 / 2 = 2 resto 0 ----> 0  
 ?              2 / 2 = 1 ------------> 1 
-
 */
+
 function DecimalABinario(num){
     var binario = ''
     while ( num > 0){
@@ -34,7 +34,6 @@ function DecimalABinario(num){
     }
     return binario
 }
-
 
 
 module.exports = {
