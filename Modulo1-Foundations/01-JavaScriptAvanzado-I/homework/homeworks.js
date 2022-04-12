@@ -5,7 +5,7 @@ x = 1   // La x va a valer uno, pero no esta declarada como variable
 var a = 5   // la variable a vale 5
 var b = 10   // la variable b vale 10
 var c = function(a, b, c) {
-  var x = 10 
+  var x = 10   // 
   console.log(x)
   console.log(a)
   var f = function(a, b, c) {
