@@ -1,7 +1,5 @@
 # Ejercicios
 
-## JavaScript
-
 ### Scope & Hoisting
 
 Determiná que será impreso en la consola, sin ejecutar el código.
