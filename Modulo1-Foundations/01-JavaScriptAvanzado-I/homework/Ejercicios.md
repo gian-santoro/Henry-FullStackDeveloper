@@ -2,6 +2,9 @@
 
 ### Scope & Hoisting
 
+
+
+
 > Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
 
 ````
