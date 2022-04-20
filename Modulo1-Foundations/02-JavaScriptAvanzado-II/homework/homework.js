@@ -7,10 +7,8 @@ newCounter(); // 1
 newCounter(); // 2
 */
 function counter() {
-  let contador = 0
-  return function incremento() {contador = contador + 1;return contador}
 }
-const newCounter = counter();
+
 
 /*
 Usa closures para crear un caché para la función cb.
