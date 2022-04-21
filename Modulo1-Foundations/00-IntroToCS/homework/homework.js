@@ -1,4 +1,5 @@
 'use strict'
+
 /*
 $           PASAR DE BINARIO A DECIMAL 
 (Se eleva a potencia 2 cada número binario y se suma el resultado de cada numero al final.)
