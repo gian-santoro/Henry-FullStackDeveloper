@@ -1,4 +1,4 @@
-<img aling='center' src="https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png" alt="kapelucito">
+<img align='center' src="https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png" alt="kapelucito">
 
 
 <h1 align="center"></h1>
