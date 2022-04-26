@@ -10,6 +10,13 @@ $           PASAR DE BINARIO A DECIMAL
 ?              1 x 2^4 = 1 x 16 = 16
 */
 function BinarioADecimal(num) {
+  var array = num.split("");
+
+  var suma = 0
+   for (let i = 0; i < array.length; i++) {
+     suma = suma + Math.pow(2, array.length-1-i) * array [i]
+   }
+   return suma
 }
 
 
@@ -24,6 +31,16 @@ $         PASAR DE DECIMAL A BINARIO
 */
 
 function DecimalABinario(num){
+  let binario = "";
+
+   while (num >= 2){
+     binario += (num % 2);
+     num = Math.floor (num / 2);
+   }
+  
+   binario += num; 
+
+   return binario.split("").reverse().join("");
 }
 
 
