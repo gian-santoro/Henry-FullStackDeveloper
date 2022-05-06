@@ -14,7 +14,16 @@ function bubbleSort(array) {
   // el array recibido como parámetro
   // Devolver el array ordenado resultante
   // Tu código:
-
+  for (var j = 0; j < array.length; j++) {
+    for (var i = 0; i < array.length; i++) {
+      if(array[i] > array[i + 1]){
+        aux = array[i + 1];
+        array[i + 1] = array[i]
+        array[i] = aux
+    }
+  }
+}
+return array;
 }
 
 

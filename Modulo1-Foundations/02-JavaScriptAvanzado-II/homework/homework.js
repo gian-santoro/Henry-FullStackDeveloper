@@ -6,7 +6,12 @@ ejemplo: const newCounter = counter();
 newCounter(); // 1
 newCounter(); // 2
 */
-function counter() {
+function counter() { 
+  var contador = 0;
+  return function (){
+    contador++
+    return contador;
+  }
 }
 
 
@@ -41,8 +46,8 @@ function getNombre(){
  // Escribir código, sin modificar lo que ya se encuentra escrito arriba, para poder llamar al método getNombre para obtener primero el nombre del instructor y luego para obtener el nombre del alumno.
 // Modificar los undefined por el código correspondiente en cada caso
 // Pista, tenes que bindear el this!
-let getNombreInstructor = undefined;
-let getNombreAlumno = undefined;
+let getNombreInstructor = getNombre.bind(instructor);
+let getNombreAlumno = getNombre.bind(alumno);
 
 
 /*Guardar en las siguientes tres variables una función que devuelva una cadena utilizando la función "crearCadena"
@@ -61,11 +66,11 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena){
 // Modificar los undefined por el código correspondiente en cada caso
 // Pista, tenes que usar bind para "bindear" algunos parámetros de la función crearCadena.
 
-let textoAsteriscos = undefined;
+let textoAsteriscos = crearCadena.bind(this, "*", "*");
 
-let textoGuiones = undefined;
+let textoGuiones = crearCadena.bind(this, "-", "-");
 
-let textoUnderscore = undefined;
+let textoUnderscore = crearCadena.bind(this, "_", "_");
 
 
 
