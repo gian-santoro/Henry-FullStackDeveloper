@@ -11,12 +11,79 @@
 // search: Busca un valor dentro de la lista. Puede recibir un valor o una función. Si no hubiera resultados, devuelve null.
 
 function LinkedList() {
-
+  this.head = null;
 }
 
 function Node(value){
-
+  this.value = value;
+  this.next = null;
 }
+
+LinkedList.prototype.add = function (data){
+  let node = new Node(data);
+  let current = this.head;
+  if(!current){
+    this.head = node;
+    return node;
+  }
+  while(current.next){
+    current = current.next
+  }
+  current.next = node;
+  return node;
+}
+
+LinkedList.prototype.remove = function (){
+  let current = this.head;
+  if(!current) return false;
+  else if(current.next === null){
+    let aux = current.value
+    this.head = null
+    return aux
+  }
+  while(current.next.next !== null){
+    current = current.next;
+  }
+  let aux = current.next.value;
+  current.next = null;
+  return aux;
+}
+
+LinkedList.prototype.search = function(value){
+  if(this.head === null) return null; 
+  var algunLugar;
+  if(typeof value !=="function"){
+    algunLugar = function (valor){
+      return valor === value
+    }
+  } else {
+    algunLugar = value
+  }
+  
+  var current = this.head
+  while(current){
+    if(algunLugar(current.value)){
+      return current.value
+    } else {
+      current = current.value
+    }
+  }
+  return null;
+}
+  //if(this.head === null) return null;
+  //let current = this.head;
+  //while(current){
+    //if(current.value === value) return current.value;
+    //else if(typeof value == "function"){
+      //if(value(current.value)){
+        //return current.value
+      //}
+    //}
+    //current = current.next
+  //}
+  //return null;
+//}
+
 
 // Hash Table( ver información en: https://es.wikipedia.org/wiki/Tabla_hash)
 // Una Hash table contiene un arreglo de "contenedores" o buckets donde puede guardar información.
